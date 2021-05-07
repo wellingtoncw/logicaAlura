@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O problema das gerações</title>
+</head>
+<body>
+    
+
+    <script>
+
+        function pulaLinha(){
+            document.write("<br>")
+        }
+
+        function mostra(mensagem){
+            document.write(mensagem)
+        }
+
+        function calculaGeracoes(anoAtual, anoInicial){
+            var mediaIdadeFilhos = 28
+            var qtdadeAnosPassados = anoAtual - anoInicial
+            var mediaGeracoes = qtdadeAnosPassados / mediaIdadeFilhos
+
+            pulaLinha()
+
+            return mediaGeracoes;
+        }
+
+        
+
+        mostra("Desde 1500 até o ano atual, se passaram " +calculaGeracoes(2021, 1500).toFixed(3) + " gerações.")
+
+    </script>
+</body>
+</html>
