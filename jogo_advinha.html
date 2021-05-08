@@ -18,7 +18,15 @@
             pulaLinha()
         }
 
-        
+        var numeroPensado = Math.round(Math.random() * 10) // multiplica pra ter um numero entre 0 e 10 e arredonda utilizando o Math.round()
+
+        var chute = parseInt(prompt("Digite seu chute: "), 10)
+
+        if(chute == numeroPensado) {
+            mostra("Você acertou! PARABÉNS!!")
+        } else {
+            mostra("Você errou!! O número pensado foi: " +numeroPensado)
+        }
         
         
     </script>
