@@ -25,11 +25,18 @@
 
         mostra("Os pontos do seu time é: " +pontos)
 
-        mostra("Seu time está melhor que o ano passado.")
-
-        mostra("Seu time está igual ao ano passado.")
-
-        mostra("Seu time está pior que o ano passado")
+        if(pontos > 28) {
+            mostra("Seu time está melhor que o ano passado.")
+        }
+        
+        if(pontos < 28) {
+            mostra("Seu time está pior que o ano passado")
+        }
+        
+        if(pontos == 28) {
+            mostra("Seu time está igual ao ano passado.")
+        }
+        
         
     </script>
 </body>
