@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anos que tiveram Copa do Mundo</title>
+</head>
+<body>
+
+    <script>
+    
+        function pulaLinha() {
+    
+            document.write("<br>");
+        }
+    
+        function mostra(frase) {
+    
+            document.write(frase);
+            pulaLinha();
+        }
+        
+        var par = 0
+
+        while(par <= 100) {
+            mostra(par);
+            par = par + 2
+        }
+
+        mostra("================FIM!");
+
+        //Imprimir os números entre 30 e 40 (inclusive 30 e 40) com exceção dos números 33 e 37
+
+        var numeroInicial = 30
+        var numeroFinal = 40
+
+        while(numeroInicial <= numeroFinal) {
+            if (numeroInicial == 33 || numeroInicial == 37){
+                numeroInicial = numeroInicial + 1
+            } else {
+                mostra(numeroInicial)
+                numeroInicial = numeroInicial + 1
+            }   
+    }
+
+        mostra("================FIM!");
+
+        // Imprimi em ordem decrescente todos os números entre 20 e 0, incluindo os limites!
+        var numeroDecrescente = 20
+        while(numeroDecrescente >= 0){
+            mostra(numeroDecrescente)
+            numeroDecrescente--
+        }
+
+        mostra("================FIM!");
+    </script>
+    
+</body>
+</html>
