@@ -1,0 +1,42 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Média idades familiares</title>
+    </head>
+    <body>
+        <script>
+    
+            function pulaLinha() {
+        
+                document.write("<br>");
+            }
+        
+            function mostra(frase) {
+        
+                document.write(frase);
+                pulaLinha();
+            }
+    
+            var totalFamiliares = parseInt(prompt("Informe a quantidade de familiares: "));
+
+            var totalIdades = 0 // a inicialização dessa variável tem que se fora do while, pois la dentro toda vez que houver o incremento a variável voltará ao valor de zero
+            var contador = 1
+            
+            while(contador <= totalFamiliares){
+                var idade = parseInt(prompt("Digite a idade do familiar: "));
+                totalIdades += idade
+                contador++;
+            }
+            
+            var media = totalIdades / totalFamiliares
+
+            mostra(media)
+            
+    
+             
+        </script>
+    </body>
+    </html>
