@@ -20,13 +20,23 @@
 
         var numeroPensado = Math.round(Math.random() * 10) // multiplica pra ter um numero entre 0 e 10 e arredonda utilizando o Math.round()
 
-        var chute = parseInt(prompt("Digite seu chute: "))
+        
 
-        if(chute == numeroPensado) {
-            mostra("Você acertou! PARABÉNS!!")
-        } else {
-            mostra("Você errou!! O número pensado foi: " +numeroPensado)
+        var tentativas = 3
+        var contador = 1
+
+        while(contador <= tentativas){
+            var chute = parseInt(prompt("Digite seu chute: "))    
+                if(chute == numeroPensado) {
+                    mostra("Você ACERTOU!")
+                    break //força a quebra do while (também serve para o for)
+                } else {
+                    mostra("Você ERROU!!")
+            }
+            contador++
         }
+        mostra("Número Pensado: " +numeroPensado)
+        mostra("FIM!")
         
         
     </script>
