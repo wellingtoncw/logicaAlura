@@ -12,17 +12,28 @@
 
     <script>
 
-        var segredo = []
+        var segredos = [5, 7, 10, 2]
 
         var input = document.querySelector("input")
         input.focus();
 
         function verifica() {
-            if(input.value == segredo) {
-                alert("Você ACERTOU!")
-            } else {
-            alert("Você ERROU!!!!")
+
+            var achou = false // variavel pra controlar a mensagem de erro
+
+            for(var posicao = 0; posicao < segredos.length; posicao++) { // o vetor possui 3 índices, por isso uso posicao(que são 4 elementos) < 4
+                
+                if(input.value == segredos[posicao]) {
+                    alert("Você ACERTOU!")
+                    achou = true // se acertar a variavel muda para o valor true
+                    break
+                }
             }
+
+            if(achou == false) { // se não acertar nenhum dos elementos do vetor...
+                alert("Você ERROU!!")
+            }
+            
             input.value = ""
             input.focus()
         }
