@@ -18,6 +18,32 @@
         pincel.fillStyle = 'grey'
         pincel.fillRect(0 ,0 , 600, 400)
 
+        function desenhaCirculo(evento){ //esse parâmetro é passado pelo navegador com todas as informações do onclick
+            
+            var x = evento.pageX - tela.offsetLeft // pega a coordenada x e tira o espaço da esquerda
+            var y = evento.pageY - tela.offsetTop // pega a coordenada y e tira o espaço do top
+
+            //desenha bolinha no canvas
+            pincel.fillStyle = 'blue'
+            pincel.beginPath()
+            pincel.arc(x, y, 10, 0, 2 * 3.14)
+            pincel.fill()
+
+            console.log(x + ',' + y)
+            
+        }
+
+        tela.onclick = desenhaCirculo //não coloca o () pois a função só pode ser executada após o click
+
+        function mudaCor() {
+
+            alert('Funcionou!');
+            return false;
+
+        }
+
+        tela.oncontextmenu = mudaCor;
+
     </script>
 
 </body>
