@@ -18,13 +18,16 @@
         pincel.fillStyle = 'grey'
         pincel.fillRect(0 ,0 , 600, 400)
 
+        var cores = ['blue', 'red', 'green']
+        var indiceCorAtual = 0; // começa com blue
+
         function desenhaCirculo(evento){ //esse parâmetro é passado pelo navegador com todas as informações do onclick
             
             var x = evento.pageX - tela.offsetLeft // pega a coordenada x e tira o espaço da esquerda
             var y = evento.pageY - tela.offsetTop // pega a coordenada y e tira o espaço do top
 
             //desenha bolinha no canvas
-            pincel.fillStyle = 'blue'
+            pincel.fillStyle = cores[indiceCorAtual]
             pincel.beginPath()
             pincel.arc(x, y, 10, 0, 2 * 3.14)
             pincel.fill()
@@ -37,12 +40,16 @@
 
         function mudaCor() {
 
-            alert('Funcionou!');
-            return false;
+            indiceCorAtual++;
 
+            if(indiceCorAtual >= cores.length) {
+                indiceCorAtual = 0; // volta para a primeira cor, azul
+            }
+
+            return false; // para não exibir o menu padrão do canvas
         }
 
-        tela.oncontextmenu = mudaCor;
+        tela.oncontextmenu = mudaCor; //oncontextmenu escuta o click do botão direito do mouse
 
     </script>
 
